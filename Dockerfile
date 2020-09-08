@@ -8,7 +8,7 @@ WORKDIR /src
 COPY webApiTest.csproj /src
 RUN dotnet restore
 COPY . .
-WORKDIR /src
+WORKDIR /src 
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
